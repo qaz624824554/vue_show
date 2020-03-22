@@ -24,3 +24,7 @@ body,
 .el-table {
     margin-bottom: 15px;
 }
+
+.el-cascader-panel {
+    height: 300px;
+}

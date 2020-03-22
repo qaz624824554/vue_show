@@ -62,7 +62,6 @@ export default {
     async getMenuList() {
       const { data: res } = await this.$http.get('/menus')
       this.menusInfo = res.data
-      console.log(this.menusInfo)
     },
     // 侧边栏伸缩按钮事件
     toggleChange() {
@@ -72,7 +71,6 @@ export default {
     saveNavState(path) {
       window.sessionStorage.setItem('activePath', path)
       this.activePath = path
-      console.log(this.activePath)
     }
   },
   // data数据
