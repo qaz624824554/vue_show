@@ -28,3 +28,15 @@ body,
 .el-cascader-panel {
     height: 300px;
 }
+
+.el-steps {
+    margin:20px 0 30px 0!important;
+}
+
+.el-checkbox {
+    margin-right: 10px!important;
+}
+
+.quill-editor {
+    min-height: 300px;
+  }
