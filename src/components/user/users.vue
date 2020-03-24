@@ -9,7 +9,7 @@
     <!-- 卡片区域 -->
     <el-card>
       <!-- 搜索框按钮 -->
-      <el-row :gutter="20">
+      <el-row :gutter="20" style="marginBottom: 20px">
         <el-col :span="8">
           <el-input placeholder="请输入内容" v-model="queryList.query" clearable @clear="searchUserList">
             <!-- 点击搜索按钮进行搜索 -->
@@ -22,7 +22,7 @@
         </el-col>
       </el-row>
       <!-- 用户表格 -->
-      <el-table :data="userList" style="width: 100%">
+      <el-table :data="userList" style="width: 100%" stripe>
         <el-table-column type="index" label="#"></el-table-column>
         <el-table-column prop="username" label="姓名" width="180"></el-table-column>
         <el-table-column prop="email" label="邮箱" width="180"></el-table-column>
