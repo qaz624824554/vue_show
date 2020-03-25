@@ -25,9 +25,10 @@ npm run lint
 #### 1.登录页面
 
 1. 后台登录功能，需要输入用户名和密码进行校验，用户名是admin，密码是123456，校验通过后想后台发送ajax请求验证，后台返回token，将token存储到sessionstorage
+
 2. 登录成功后，通过路由守卫判断是否有登录，没有登录则没有权限去到首页
 
-![image-20200325203648066](/Users/mac/Library/Application Support/typora-user-images/image-20200325203648066.png)
+   ![](/Users/mac/Desktop/前端项目/vue_show/readmeImages/image-20200325203648066.png)
 
 #### 1.1首页
 
