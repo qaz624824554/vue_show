@@ -241,8 +241,6 @@ export default {
       }
       this.userList = res.data.users
       this.total = res.data.total
-      console.log('---------------')
-      console.log(this.userList)
     },
     handleSizeChange(val) {
       this.queryList.pagesize = val
@@ -300,7 +298,6 @@ export default {
       }
       // 将获取的数据填入表单
       this.editForm = res.data
-      console.log(this.editForm)
     },
     // 编辑用户对话框取消
     editFormClosed() {

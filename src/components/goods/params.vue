@@ -321,7 +321,6 @@ export default {
       const { data: res } = await this.$http.get(
         `/categories/${val.cat_id}/attributes/${val.attr_id}`
       )
-      console.log(res.data)
 
       if (res.meta.status !== 200) {
         return this.$message.error('获取参数信息失败')

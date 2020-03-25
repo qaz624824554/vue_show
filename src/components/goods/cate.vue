@@ -215,7 +215,6 @@ export default {
             this.addCateForm
           )
           if (res.meta.status !== 201) {
-            console.log(res.meta)
             return this.$message.error('添加商品分类失败')
           }
           this.$message.success('添加商品分类成功')

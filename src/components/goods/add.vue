@@ -174,18 +174,6 @@ export default {
       if (oldActiveName === '0' && this.addGoodForm.goods_cat.length !== 3) {
         this.$message.error('请选择分类')
         return false
-      } else if (this.addGoodForm.goods_name.trim() === '') {
-        this.$message.error('请输入商品名称')
-        return false
-      } else if (this.addGoodForm.goods_price.trim() === '0') {
-        this.$message.error('请输入商品价格')
-        return false
-      } else if (this.addGoodForm.goods_weight.trim() === '0') {
-        this.$message.error('请输入商品重量')
-        return false
-      } else if (this.addGoodForm.goods_number.trim() === '0') {
-        this.$message.error('请输入商品数量')
-        return false
       }
     },
     // tabs点击事件
@@ -235,7 +223,6 @@ export default {
       const path = file.response.data.tmp_path
       const i = this.addGoodForm.pics.findIndex(v => v.pic === path)
       this.addGoodForm.pics.splice(i, 1)
-      console.log(this.addGoodForm.pics)
     },
     // 文件上传成功时的钩子
     handleSuccess(response) {
@@ -268,7 +255,6 @@ export default {
           this.addGoodForm.attrs.push(obj)
         })
         form.attrs = this.addGoodForm.attrs
-        console.log(form)
         const { data: res } = await this.$http.post('/goods', form)
         if (res.meta.status !== 201) {
           return this.$message.error('添加商品失败')

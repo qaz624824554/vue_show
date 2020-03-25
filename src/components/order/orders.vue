@@ -150,7 +150,6 @@ export default {
       }
       this.logisticsInformation = res.data
       this.progressVisible = true
-      console.log(this.logisticsInformation)
     }
   },
   created() {

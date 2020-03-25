@@ -13,15 +13,27 @@ import 'quill/dist/quill.core.css' // import styles
 import 'quill/dist/quill.snow.css' // for snow theme
 import 'quill/dist/quill.bubble.css' // for bubble theme
 
+// 导入nprogress
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 // 设置url
 axios.defaults.baseURL = 'http://127.0.0.1:8081/api/private/v1/'
+
 // 设置请求拦截器
 axios.interceptors.request.use(config => {
+  // 设置NProgress
+  NProgress.start()
   config.headers.Authorization = window.sessionStorage.getItem('token')
   // 必须return config!!!
   return config
 }, error => {
   return Promise.reject(error)
+})
+// 响应拦截器
+axios.interceptors.response.use(config => {
+  NProgress.done()
+  return config
 })
 // 挂载
 Vue.prototype.$http = axios
